@@ -29,6 +29,18 @@ public class Tree {
 		}
 	}
 
+	public void blooming() {
+		List<Apple> apples = new ArrayList<Apple>();
+		for (int i = 0; i < getTree().size(); i++) {
+			if (getTree().get(i).getCondition() == 1) {
+				apples.add(new Apple((int) Math.random() * 1000, 1));
+				getTree().get(i).setCondition(2);
+			}
+		}
+		System.out.println("Blooming apples : " + apples.size());
+		getTree().addAll(apples);
+	}
+	
 	private List<Apple> getTree() {
 		if (tree == null) {
 			tree = new ArrayList<Apple>();
@@ -37,7 +49,7 @@ public class Tree {
 	}
 
 	public void print() {
-		System.out.println("Count of apples : " + tree.size());
+		System.out.println("Count of apples : " + getTree().size());
 		for (Apple apple : getTree()) {
 			System.out.println(apple);
 		}

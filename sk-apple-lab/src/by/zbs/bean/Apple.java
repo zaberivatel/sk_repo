@@ -9,6 +9,22 @@ public class Apple {
 		this.condition = condition;
 	}
 
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public int getCondition() {
+		return condition;
+	}
+
+	public void setCondition(int condition) {
+		this.condition = condition;
+	}
+
 	public String toString() {
 		return "Apple [weight=" + weight + ", condition=" + condition + "]";
 	}
